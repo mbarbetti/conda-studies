@@ -13,3 +13,4 @@ def circuit():
   return qml.expval(qml.PauliZ(0))
 
 circuit()
+# tensor(0., requires_grad=True)
