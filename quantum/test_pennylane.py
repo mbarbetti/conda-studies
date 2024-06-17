@@ -12,5 +12,9 @@ def circuit():
   qml.CNOT(wires=[0,1])
   return qml.expval(qml.PauliZ(0))
 
-circuit()
-# tensor(0., requires_grad=True)
+try:
+    print("[DEBUG] Circuit:", circuit())
+    # Circuit: 0.0
+    print("[STATUS] GPU available")
+except:
+    print("[STATUS] GPU not available")

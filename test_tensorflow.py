@@ -9,4 +9,4 @@ if len(devices) > 0:
     rnd = tf.random.uniform(shape=(100, 1))
     print("[STATUS] GPU available")
 else:
-    print("[STATUS] GPU not available") 
+    print("[STATUS] GPU not available")

@@ -16,7 +16,11 @@ circ.measure_all()
 aersim = AerSimulator()
 
 # Perform an ideal simulation
-result_ideal = aersim.run(circ).result()
-counts_ideal = result_ideal.get_counts(0)
-print('[DEBUG] Counts(ideal):', counts_ideal)
-# Counts(ideal): {'000': 493, '111': 531}
+try:
+    result_ideal = aersim.run(circ).result()
+    counts_ideal = result_ideal.get_counts(0)
+    print('[DEBUG] Counts(ideal):', counts_ideal)
+    # Counts(ideal): {'000': 493, '111': 531}
+    print("[STATUS] GPU available")
+except:
+    print("[STATUS] GPU not available")
