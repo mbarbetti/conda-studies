@@ -1,8 +1,10 @@
 # --- Jax ---
 
 import jax
+import flax
 
 print(f"[DEBUG] Jax version {jax.__version__}")
+print(f"[DEBUG] Flax version {flax.__version__}")
 
 def jax_has_gpu():
     try:
